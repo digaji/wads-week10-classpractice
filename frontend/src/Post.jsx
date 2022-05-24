@@ -19,7 +19,7 @@ class Post extends React.Component {
         <p className="text-2xl font-medium mb-4">Enter your favourite hero here!</p>
         <form onSubmit={async (e) => {
           if (this.state.heronameInput !== "") {
-            e.preventDefault()
+            e.preventDefault();
             const heroname = this.state.heronameInput;
             const realname = this.state.realnameInput;
             this.setState({ heronameInput: "", realnameInput: "" });
@@ -27,6 +27,7 @@ class Post extends React.Component {
               heroname: heroname,
               realname: realname,
             });
+            window.location.assign("/");
           }
         }}>
           <input className="mb-4 p-2 mx-auto rounded text-black"
@@ -44,7 +45,7 @@ class Post extends React.Component {
             value={this.state.realnameInput}
             type="text"
             placeholder="Real name"/><br />
-          <input className="bg-gray-200 text-black rounded p-2" type="submit" value="Submit" />
+          <input className="bg-gray-200 text-black rounded p-2 active:bg-gray-200" type="submit" value="Submit" />
         </form>
       </div>
     );
