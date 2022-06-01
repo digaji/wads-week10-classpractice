@@ -9,7 +9,7 @@ class Post extends React.Component {
       realnameInput: "",
       initialCall: false,
     };
-    this.url = "http://localhost:3001/hero";
+    this.url = "https://herolist-backend.herokuapp.com/hero";
   }
 
   render() {
@@ -23,7 +23,7 @@ class Post extends React.Component {
             const heroname = this.state.heronameInput;
             const realname = this.state.realnameInput;
             this.setState({ heronameInput: "", realnameInput: "" });
-            axios.post(this.url, {
+            await axios.post(this.url, {
               heroname: heroname,
               realname: realname,
             });

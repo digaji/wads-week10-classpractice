@@ -96,5 +96,5 @@ app.delete("/hero/:heroid", async (req: Request, res: Response, next: NextFuncti
 });
 
 // listen on port
-const PORT = 3001;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Application listening at http://localhost:${PORT}`));

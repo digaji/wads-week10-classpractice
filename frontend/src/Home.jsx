@@ -10,7 +10,7 @@ class Home extends React.Component {
       inputField: "",
       initialCall: false,
     };
-    this.url = "http://localhost:3001/hero";
+    this.url = "https://herolist-backend.herokuapp.com/hero";
   }
 
   async getAllHero() {
